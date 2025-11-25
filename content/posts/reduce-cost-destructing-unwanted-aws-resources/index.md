@@ -1,12 +1,11 @@
 ---
 title: Reduce your cost by destructing unwanted AWS resources
-date: 2021-12-19
+date: 2021-12-19T00:00:00.000Z
 tags:
   - process-automation
   - aws
   - cost-optimization
 ---
-
 Utilize AWS-Nuke to reduce AWS cost by programmatically destroying any resources in an AWS account that are not considered Default and AWS-Managed.
 
 
@@ -84,3 +83,5 @@ AWS-Nuke can help you to reduce your cost by destructing unwanted resources. Use
 [soc]: https://en.wikipedia.org/wiki/Separation_of_concerns
 [aws-cost-optimization]: https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html
 [aws-nuke-automation]: https://github.com/1Strategy/automated-aws-multi-account-cleanup
+
+I hope this works.
