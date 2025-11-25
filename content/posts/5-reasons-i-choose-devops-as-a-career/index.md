@@ -1,6 +1,6 @@
 ---
 title: 5 Reasons I choose DevOps as a Career
-date: 2022-12-04T02:10:50.948Z
+date: '2022-12-04'
 tags:
   - devops
   - aws
@@ -37,3 +37,5 @@ As a DevOps professional, you will not be limited to just one technology or plat
 
 
 I highly recommend taking a close look at DevOps and considering it as an area of development to pursue. It is still a relatively new field, but the career opportunities are great and it has the potential to be around for years to come. I hope that this article provided some information and encouragement on the subject and will help you on your journey to learn more about DevOps.
+
+I hope this works.
