@@ -7,11 +7,11 @@ tags:
   - newrelic
   - iac
 ---
-[Terraform](https://www.terraform.io/) is a popular infrastructure-as-code software tool built by HashiCorp. You can provision all kinds of infrastructure and services, including New Relic dashboards and alerts with the Terraform. 
+[Terraform](https://www.terraform.io/) is a popular infrastructure-as-code software tool built by HashiCorp. You can provision all kinds of infrastructure and services, including New Relic dashboards and alerts with the Terraform.
 
-On the other hand, New Relic is a web application performance service designed to work in real-time with your live web app. 
+On the other hand, New Relic is a web application performance service designed to work in real-time with your live web app.
 
-In this get started guide, you can learn how to set up New Relic. More specifically, you can provision an alert policy, alert conditions, alert channels, and Dashboard. 
+In this get started guide, you can learn how to set up New Relic. More specifically, you can provision an alert policy, alert conditions, alert channels, and Dashboard.
 
 ## Before you begin
 
@@ -42,9 +42,9 @@ terraform {
 
 👆What is happening here?
 
-* `required_version` is your Terraform version validation. You can check your terraform version with `terraform -v`. 
-* `required_providers.source` is the name of NewRelic providers. That brings the new relic provider to interact with the new relic using terraform. 
-* `required_providers.version` ensures the new relic provider version that you wish to use. 
+- `required_version` is your Terraform version validation. You can check your terraform version with `terraform -v`.
+- `required_providers.source` is the name of NewRelic providers. That brings the new relic provider to interact with the new relic using terraform.
+- `required_providers.version` ensures the new relic provider version that you wish to use.
 
 ## Configure New Relic Provider
 
@@ -61,19 +61,15 @@ provider "newrelic" {
 
 👆What is happening here?
 
-* `account_id` - Your New Relic Account ID. Visit to learn more https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id
-* `api_key` - Your Personal New Relic API Key. Visit to learn more https://docs.newrelic.com/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key
-* `region` - Valid regions are the US and EU. Your region is `US` if the New Relic page is located at `one.newrelic.com` and `EU` if your account is located at `one.eu.newrelic.com`
+- `account_id` - Your New Relic Account ID. Visit to learn more https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id
+- `api_key` - Your Personal New Relic API Key. Visit to learn more https://docs.newrelic.com/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key
+- `region` - Valid regions are the US and EU. Your region is `US` if the New Relic page is located at `one.newrelic.com` and `EU` if your account is located at `one.eu.newrelic.com`
 
-You can also configure the New Relic provider using the environment variable. This is a useful way to set default values instead of hard coding into code and publishing it to the repository. 
+You can also configure the New Relic provider using the environment variable. This is a useful way to set default values instead of hard coding into code and publishing it to the repository.
 
-The table below shows the available environment variables equivalent to attributes and all of these are required attributes. 
+The table below shows the available environment variables equivalent to attributes and all of these are required attributes.
 
-| Schema Attribute | Equivalent Env Variable |
-| ---------------- | ----------------------- |
-| account_id       | NEW_RELIC_ACCOUNT_ID    |
-| api_key          | NEW_RELIC_API_KEY       |
-| region           | NEW_RELIC_REGION        |
+Schema AttributeEquivalent Env Variableaccount_idNEW_RELIC_ACCOUNT_IDapi_keyNEW_RELIC_API_KEYregionNEW_RELIC_REGION
 
 With the New Relic provider configured, initialize the Terraform:
 
@@ -81,7 +77,7 @@ With the New Relic provider configured, initialize the Terraform:
 
 ## Reference your New Relic Application in Terraform
 
-You can  define various resources for your application. As you will be targeting a specific application. You can use `newrelic_entity` data to fetch information from New Relic to reference in terraform code. 
+You can define various resources for your application. As you will be targeting a specific application. You can use `newrelic_entity` data to fetch information from New Relic to reference in terraform code.
 
 ```hcl
 data "newrelic_entity" "app_apm" {
@@ -104,11 +100,10 @@ data "newrelic_account" "acc" {
 
 👆What is happening here?
 
-* `newrelic_entity.app_apm` is to fetch information for APM New Relic Application. 
-* `newrelic_entity.app_browser` is to fetch information for Browser New Relic.
-* `newrelic_account` is to get information about the New Relic account so you can reference it later in your configuration. 
+- `newrelic_entity.app_apm` is to fetch information for APM New Relic Application.
+- `newrelic_entity.app_browser` is to fetch information for Browser New Relic.
 
-It's considered a best practice to tag all your resources on Cloud. You can tag New Relic resources with `newrelic_entity_tags`. Let's tag our APM and Browser New Relic application. 
+It's considered a best practice to tag all your resources on Cloud. You can tag New Relic resources with `newrelic_entity_tags`. Let's tag our APM and Browser New Relic application.
 
 ```hcl
 resource "newrelic_entity_tags" "app_apm_tags" {
@@ -128,7 +123,7 @@ resource "newrelic_entity_tags" "app_browser_tags" {
 }
 ```
 
-At this point, you should be able to add tags to your application after the command `terraform apply`. 
+At this point, you should be able to add tags to your application after the command `terraform apply`.
 
 Now you have basic infrastructure as code for Terraform up and running. Let's provision other available resources to mature our New Relic implementation with the help of Terraform IAC.
 
@@ -140,11 +135,10 @@ resource "newrelic_alert_policy" "golden_signal_policy" {
 }
 ```
 
-👆
-`name` is the name of the Alert Policy. 
+👆\
+`name` is the name of the Alert Policy.
 
 > 💡 **Info!** At this point, you can apply your terraform code with `terraform apply`. Every time you `apply` changes, Terraform asks you to confirm the actions you've told it to run. Type "yes".
-
 
 ## Add alert conditions in the alert policy
 
@@ -229,7 +223,7 @@ resource "newrelic_alert_condition" "error_percentage" {
 
 ## Get notified when an alert triggers
 
-There are multiple ways available from New Relic to get notified when an alert triggers. For starters, you can use Email and Slack notifications. 
+There are multiple ways available from New Relic to get notified when an alert triggers. For starters, you can use Email and Slack notifications.
 
 ```hcl
 resource "newrelic_alert_channel" "team_email" {
@@ -258,7 +252,7 @@ resource "newrelic_alert_channel" "slack_notification" {
 }
 ```
 
-You need to add New Relic Slack App to your Slack account. and select the Slack channel to send the notification. 
+You need to add New Relic Slack App to your Slack account. and select the Slack channel to send the notification.
 
 Last, but not least, you need to associate them with the respective New Relic alert policy. Create `newrelic_alert_policy_channel`.
 
@@ -269,9 +263,9 @@ resource "newrelic_alert_policy_channel" "golden_signals" {
 }
 ```
 
-Currently, I am not able to find a possible way to segregate the alerts based on priority. For Example, send warning notifications to the Slack channel and critical notifications to the email channel. 
+Currently, I am not able to find a possible way to segregate the alerts based on priority. For Example, send warning notifications to the Slack channel and critical notifications to the email channel.
 
-One possible way could be to separate alert policies for warning and critical, and associate channels to respective alert policies. 
+One possible way could be to separate alert policies for warning and critical, and associate channels to respective alert policies.
 
 ## Browser Dashboard
 
@@ -304,6 +298,7 @@ widget_markdown {
   }
 }
 ```
+
 👆 is creating "Website Performance" with the example "Unique User Sessions" and the markdown widget. Add the appropriate tag(s) to the dashboard:
 
 ```hcl
@@ -331,12 +326,12 @@ resource "newrelic_workload" "workload_production" {
 }
 ```
 
-👆 This will provision New Relic Work Load with the 
+👆 This will provision New Relic Work Load with the
 
-* `name` of "Production-WorkLoad" 
-* `account_id` on the defined account 
-* and `entity_search_query` would be based on environment tags defined in the implementation of resources with `newrelic_entity_tags`. 
+- `name` of "Production-WorkLoad"
+- `account_id` on the defined account
+- and `entity_search_query` would be based on environment tags defined in the implementation of resources with `newrelic_entity_tags`.
 
-You may also want to consider automating this process in your CI/CD pipeline.  Use Terraform's [recommended practices guide](https://www.terraform.io/docs/cloud/guides/recommended-practices/index.html) to learn more about their recommended workflow and how to evolve your provisioning practices.
+You may also want to consider automating this process in your CI/CD pipeline. Use Terraform's [recommended practices guide](https://www.terraform.io/docs/cloud/guides/recommended-practices/index.html) to learn more about their recommended workflow and how to evolve your provisioning practices.
 
 Congratulations! You're officially practicing observability-as-code. Review the [New Relic Terraform provider documentation](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs) to learn how you can take your configuration to the next level.
