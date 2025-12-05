@@ -9,12 +9,10 @@ The DevOps movement is gaining momentum. It's here to stay, and it's going to af
 
 In this article you will understand the:
 
-* what exactly is DevOps, Intro and Overview & DevOps Definition
-* Traditional Application Release Process
-* Challenges DevOps tries to solve
-* DevOps Concept
-* DevOps in Practice Become a DevOps Engineer
-* DevOps vs SRE- How does Site Reliability Engineering fit into DevOps
+- what exactly is DevOps, Intro and Overview & DevOps Definition
+- Traditional Application Release Process
+- Challenges DevOps tries to solve
+- DevOps Concept
 
 ## What is DevOps?
 
@@ -38,7 +36,6 @@ You will learn some of the most difficult problems that DevOps has attempted to 
 
 It’s very common to see developers and operations people working. Developers create new features while the operations team deploys them on production environments. Each team works independently, without considering the other team's needs. This leads to increased complexity in software development processes and reduces productivity levels.
 
-
 **A lack of coordination between teams**
 
 Coordination between teams is essential for any business process. If you want your business process to run smoothly, then you need good coordination between various departments within your organization. However, it’s not possible for each department to coordinate with each other directly; instead, a mediator needs to take care of this process for both parties involved in the project.
@@ -59,17 +56,16 @@ Developers want to get their products out, but they can't do that if they're wai
 
 DevOps is a concept that helps to describe the collaboration of software developers and information technology (IT) operations professionals. DevOps is a set of processes, methods, and tools that help bridge the gap between software development and IT operations.
 
-
 The DevOps movement has grown out of the Agile software development method. It aims to deliver working software in short cycles and to quickly adapt to changing customer requirements. DevOps began as an approach for automating testing and deployment of applications but has since expanded to include areas such as continuous integration (CI), continuous delivery (CD), continuous integration/deployment (CID), configuration management, monitoring and measurement, incident management, and problem management.
 
 **DevOps is a cross-functional role. It encompasses people, processes, and technology**
 
 The role of the DevOps Engineer can be summed up as follows:
 
-* DevOps is the link between software development and IT operations to help deliver products faster while maintaining high quality.
-* DevOps engineers have a deep technical knowledge of both software development and IT operations. 
-* They have the skills to develop and maintain the infrastructure that supports continuous integration and continuous delivery (CI/CD). 
-* They also have an understanding of software development processes, tools, and workflows.
+- DevOps is the link between software development and IT operations to help deliver products faster while maintaining high quality.
+- DevOps engineers have a deep technical knowledge of both software development and IT operations.
+- They have the skills to develop and maintain the infrastructure that supports continuous integration and continuous delivery (CI/CD).
+- They also have an understanding of software development processes, tools, and workflows.
 
 ## How Do You Become a DevOps Engineer?
 
@@ -85,9 +81,9 @@ Site Reliability Engineering (SRE) is a specialized form of software engineering
 
 SREs are often confused with DevOps engineers because they both work on software systems that run at scale in production environments. But there are some key differences between them:
 
-* SREs have an operations mindset while DevOps engineers have an engineering mindset
-* SREs work on global infrastructure while DevOps engineers work locally using local services
-* SREs focus on reliability while DevOps engineers focus on agility
+- SREs have an operations mindset while DevOps engineers have an engineering mindset
+- SREs work on global infrastructure while DevOps engineers work locally using local services
+- SREs focus on reliability while DevOps engineers focus on agility
 
 Well, this guide has reached its conclusion. I hope that it has provided you with valuable information on both DevOps terminology, concepts and how the DevOps culture and principles can be implemented.
 
