@@ -2,8 +2,7 @@
 title: new test
 date: '2025-12-11'
 draft: true
-tags:
-  - test
+tags: 'test, another tag, tag2'
 slug: new-test
 excerpt: This is for the testing of md0
 ---
