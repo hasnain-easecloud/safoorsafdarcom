@@ -8,3 +8,5 @@ slug: new-post
 # new post
 
 Start writing your content here...
+
+This is testing for new post and post editing.
