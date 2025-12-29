@@ -1,12 +1,13 @@
 ---
 title: Source code continues integration of Mendix application with Gitlab Pipeline
-date: 2022-04-10T01:05:25.244Z
+date: '2022-04-10T01:05:25.244Z'
 tags:
   - devops
   - on-premises
   - gitlab-pipeline
   - mendix
   - process-automation
+excerpt: Integration with Gitlab Blog.
 ---
 Mendix is a high productivity low-code collaborative development app platform that enables you to build and continuously improve mobile and web applications at scale.
 
