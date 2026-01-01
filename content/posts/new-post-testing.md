@@ -9,4 +9,4 @@ slug: new-post-testing
 
 This is new post for testing purposes.
 
-![Screenshot from 2025-11-27 19-18-39.png](https://raw.githubusercontent.com/hasnain-easecloud/safoorsafdarcom/md0-cms/2026-01-01/mjvhwtco/assets/images/1767275030216-screenshot-from-2025-11-27-19-18-39.png "Screenshot from 2025-11-27 19-18-39.png")
+![Screenshot from 2025-12-02 13-43-41.png](https://raw.githubusercontent.com/hasnain-easecloud/safoorsafdarcom/7b194560cce701aaa14c7fb37490cbd91a94720d/assets/images/1767286728769-screenshot-from-2025-12-02-13-43-41.png "Screenshot from 2025-12-02 13-43-41.png")
