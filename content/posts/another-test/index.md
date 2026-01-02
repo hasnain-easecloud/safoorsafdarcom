@@ -7,4 +7,4 @@ slug: another-test
 ---
 # Another Test
 
-Start writing your content here...
+Should be working as well.
