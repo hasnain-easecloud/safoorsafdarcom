@@ -7,4 +7,4 @@ slug: new-test-for-post-2
 ---
 # new test for post
 
-Start writing your content here...
+New content.
