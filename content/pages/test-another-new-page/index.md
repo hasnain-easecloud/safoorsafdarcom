@@ -8,4 +8,4 @@ excerpt: This should work as expected without issues
 ---
 # Test another new page
 
-Start writing your content here...
+New content for checking.
