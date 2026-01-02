@@ -12,4 +12,4 @@ excerpt: The new page should be created successfully.
 ---
 # New Page Testing
 
-Start writing your content here...
+Editing file should work as well.
